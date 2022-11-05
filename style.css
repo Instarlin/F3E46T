@@ -397,7 +397,7 @@ body {
   margin-bottom: 2rem;
   text-align: center;
   font-weight: bold;
-  font-size: calc(10px + (18 - 13) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(13px + (18 - 13) * ((100vw - 320px) / (1200 - 320)));
 }
 .formMessage {
   text-align: center;
