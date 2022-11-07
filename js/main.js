@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".formInput").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
-            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
-                setInputError(inputElement, "Username must be at least 10 characters in length");
+            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 3) {
+                setInputError(inputElement, "Username must be at least 3 characters in length");
             }
         });
 
@@ -47,12 +47,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /**Something */
+let counter = 0;
 $('.arrow').on('click', function(e) {
     e.preventDefault;
-    $(this).toggleClass('arrow_active');});
+    $(this).toggleClass('arrow_active');
+});
 $('.navBarActivateBtn').on('click', function(e) {
     e.preventDefault;
-    $(this).toggleClass('navBarActivateBtn_active');});
-    $('.navBarActivateBtn_active').on('click', function(e) {
-        e.preventDefault;
-        $(this).toggleClass('navBarActivateBtn');});
+    $(this).toggleClass('navBarActivateBtn_active');
+    $('#pageWrapper').toggleClass('content_activeSlider');
+    counter += 1;
+    if (counter % 2 != 0) {
+        $('#pageWrapper').animate({ scrollTop: 2000 }, 0);
+    }
+});

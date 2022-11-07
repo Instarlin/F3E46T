@@ -90,7 +90,7 @@ body {
   font-family: raleway_f, sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 .layerGrab {
   position: relative;
@@ -397,7 +397,7 @@ body {
   margin-bottom: 2rem;
   text-align: center;
   font-weight: bold;
-  font-size: calc(13px + (18 - 13) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(14px + (18 - 13) * ((100vw - 320px) / (1000 - 320)));
 }
 .formMessage {
   text-align: center;
@@ -713,8 +713,8 @@ body {
     top: -10%;
   }
   .slider {
-    width: 19vw;
-    transform: translateX(-19.6vw);
+    width: 22vw;
+    transform: translateX(-22.6vw);
   }
 }
 @media (max-width: 1300px) {
@@ -747,6 +747,17 @@ body {
   .arrow {
     width: 65px;
     height: 65px;
+  }
+  .slider {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+    transform: translateX(-100vw);
+  }
+  .content_activeSlider {
+    overflow-y: hidden;
   }
 }
 @media (max-width: 600px) {

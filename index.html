@@ -4,13 +4,15 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-    <script src="js/jquery-3.6.1.slim.min.js" defer></script>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css"/>
+    <script src="js/jquery-3.6.1.min.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js" defer></script>
     <title>SharkMap</title>
   </head>
   <body>
-    <section class="content">
+    <section class="content" id="pageWrapper">
       <section class="layerGrab">
         <div class="layer img1"></div>
         <div class="layer intro">
@@ -26,7 +28,7 @@
           </svg>
         </div>
       </section>
-      <section class="layerGrab mainContent" id="Block">
+      <section class="layerGrab mainContent">
         <div class="divider"></div>
         <div class="customShapeDividerTop">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -34,14 +36,11 @@
           </svg>
         </div>
         <div class="arrow">
-          <a href="#Block">
+          <a href="#pageBottom">
             <span></span>
           </a>
         </div>
-        <!-- <div class="drop-zone">
-          <span class="drop-zone__prompt">Drop file here or click to upload</span>
-          <input type="file" name="myFile" class="drop-zone__input">
-        </div> -->
+        <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
         <nav class="slider">
           <div class="navBarActivateBtn"><span></span></div>
           <div class="container">
@@ -95,7 +94,8 @@
             </a>
           </div> -->
         </nav>
-        <div class="customShapeDividerBottom">  
+        
+        <div class="customShapeDividerBottom" id="pageBottom">  
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shapeFill"></path>
           </svg>
